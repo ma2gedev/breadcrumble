@@ -1,0 +1,8 @@
+<div>
+  <% breadcrumbs.each_with_index do |crumb, i| %>
+    <%= '>' unless i == 0 %>
+    <span>
+      <%= link_to_unless_current crumb[:name], crumb[:url] %>
+    </span>
+  <% end %>
+</div>
