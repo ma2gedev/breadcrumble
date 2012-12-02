@@ -17,6 +17,7 @@ Or install it yourself as:
     $ gem install breadcrumble
 
 ## Usage
+### Controller
 In your controller, call `add_crumb` to push a new crumb on the breadcrumb stack.
 
     class SampleController
@@ -30,11 +31,21 @@ In your controller, call `add_crumb` to push a new crumb on the breadcrumb stack
     
     end
 
+### View
 In your view, you can render the breadcrumb navigation with the `render_breadcrumbs` helper.
 
     <body>
       <%= render_breadcrumbs %>
     </body>
+
+### Customizing layout
+Breadcrumble generates default partial template for your app.
+
+Generate template. Run the follwoing.
+
+    $ rails g breadcrumble:views
+
+then edit the partials in your app's `app/views/breadcrumble/` directory.
 
 ## Contributing
 
