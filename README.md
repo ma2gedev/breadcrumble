@@ -17,20 +17,20 @@ Or install it yourself as:
     $ gem install breadcrumble
 
 ## Usage
-In your controller, call `add_breadcrumb` to push a new element on the breadcrumb stack.
+In your controller, call `add_crumb` to push a new crumb on the breadcrumb stack.
 
     class SampleController
     
-      add_breadcrumb "home", home_url
-      add_breadcrumb "sample", sample_url
+      add_crumb "home", home_url
+      add_crumb "sample", sample_url
       
       def index
-        add_breadcrumb "index", index_url
+        add_crumb "index", index_url
       end
     
     end
 
-In your view, you can render the breadcrumb menu with the `render_breadcrums` helper.
+In your view, you can render the breadcrumb navigation with the `render_breadcrumbs` helper.
 
     <body>
       <%= render_breadcrumbs %>
