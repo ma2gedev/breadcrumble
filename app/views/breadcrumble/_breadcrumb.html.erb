@@ -2,7 +2,12 @@
   <% breadcrumbs.each_with_index do |crumb, i| %>
     <%= '>' unless i == 0 %>
     <span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-      <%= link_to_unless_current content_tag(:span, crumb[:name], itemprop: "title"), crumb[:url], itemprop: "url" %>
+      <% span_title = content_tag(:span, crumb[:name], itemprop: "title") %>
+      <% if crumb[:url] == nil %>
+        <%= span_title %>
+      <% else %>
+        <%= link_to_unless_current span_title, crumb[:url], itemprop: "url" %>
+      <% end %>
     </span>
   <% end %>
 </div>

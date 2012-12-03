@@ -6,7 +6,7 @@ module Breadcrumble
     end
 
     module ClassMethods
-      def add_crumb name, url
+      def add_crumb name, url = nil
         before_filter do |controller|
           controller.send :add_crumb, name, url
         end
@@ -15,10 +15,9 @@ module Breadcrumble
 
     protected
 
-    def add_crumb(name, url = '')
+    def add_crumb name, url = nil
       @breadcrumbs ||= []
-      @breadcrumbs << { name: name, url: url }
-      puts @breadcrumbs
+      @breadcrumbs << { name: name, url: url ? url_for(url) : nil }
     end
 
     def breadcrumbs
