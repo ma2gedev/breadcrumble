@@ -31,6 +31,8 @@ In your controller, call `add_crumb` to push a new crumb on the breadcrumb stack
     
     end
 
+Second arugment passed url_for method for convenient use, except specify nil.
+
 ### View
 In your view, you can render the breadcrumb navigation with the `render_breadcrumbs` helper.
 
