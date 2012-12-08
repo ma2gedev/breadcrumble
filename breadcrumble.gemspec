@@ -16,4 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Breadcrumble::VERSION
 
   gem.add_dependency "rails", ['>= 3.0']
+  gem.add_development_dependency "sqlite3"
+  gem.add_development_dependency "rspec-rails"
 end
