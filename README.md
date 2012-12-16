@@ -18,15 +18,15 @@ Or install it yourself as:
 
 ## Usage
 ### Controller
-In your controller, call `add_crumb` to push a new crumb on the breadcrumb stack.
+In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb stack.
 
     class SampleController
     
-      add_crumb "home", home_url
-      add_crumb "sample", sample_url
+      add_breadcrumb "home", home_url
+      add_breadcrumb "sample", sample_url
       
       def index
-        add_crumb "index", index_url
+        add_breadcrumb "index", index_url
       end
     
     end

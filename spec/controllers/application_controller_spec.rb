@@ -2,11 +2,11 @@ require "spec_helper"
 
 describe ApplicationController do
   controller do
-    add_crumb 'root', '/'
-    add_crumb 'nil', nil
+    add_breadcrumb 'root', '/'
+    add_breadcrumb 'nil', nil
 
     def index
-      add_crumb 'examples', controller: 'examples', action: 'index', only_path: true
+      add_breadcrumb 'examples', controller: 'examples', action: 'index', only_path: true
       render text: 'test'
     end
   end
@@ -16,7 +16,7 @@ describe ApplicationController do
       get :index
     end
 
-    context '.add_crumb' do
+    context '.add_breadcrumb' do
       it 'having breadcrumbs' do
         should be_success
         assigns(:breadcrumbs)[0][:name].should eq('root')
@@ -30,7 +30,7 @@ describe ApplicationController do
       end
     end
 
-    context '#add_crumb' do
+    context '#add_breadcrumb' do
       it 'url options' do
         should be_success
         assigns(:breadcrumbs)[2][:name].should eq('examples')
