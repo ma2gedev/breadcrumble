@@ -1,8 +1,9 @@
 module Breadcrumble
   module ActionController
-    def self.included klass
-      klass.extend ClassMethods
-      klass.helper_method :add_breadcrumb, :breadcrumbs
+    extend ActiveSupport::Concern
+
+    included do
+      helper_method :add_breadcrumb, :breadcrumbs
     end
 
     module ClassMethods
