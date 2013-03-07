@@ -12,11 +12,6 @@ module Breadcrumble
           controller.send :add_breadcrumb, name, url
         end
       end
-
-      def add_crumb name, url = nil
-        warn "[DEPRECATION] 'add_crumb' is deprecated. Please use 'add_breadcrumb' instead."
-        add_breadcrumb name, url
-      end
     end
 
     protected
@@ -24,11 +19,6 @@ module Breadcrumble
     def add_breadcrumb name, url = nil
       @breadcrumbs ||= []
       @breadcrumbs << { name: name, url: url ? url_for(url) : nil }
-    end
-
-    def add_crumb name, url = nil
-      warn "[DEPRECATION] 'add_crumb' is deprecated. Please use 'add_breadcrumb' instead."
-      add_breadcrumb name, url
     end
 
     def breadcrumbs
