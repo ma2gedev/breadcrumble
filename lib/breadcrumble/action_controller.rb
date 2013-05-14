@@ -18,7 +18,16 @@ module Breadcrumble
 
     def add_breadcrumb name, url = nil
       @breadcrumbs ||= []
-      @breadcrumbs << { name: name, url: url ? url_for(url) : nil }
+      @breadcrumbs << {
+        name: case name
+              when Proc then name.call(self)
+              else name
+              end,
+        url:  case url
+              when Proc then url.call(self)
+              else url ? url_for(url) : nil
+              end
+      }
     end
 
     def breadcrumbs
