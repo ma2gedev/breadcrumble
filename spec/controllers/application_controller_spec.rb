@@ -8,6 +8,7 @@ describe ApplicationController do
 
     def index
       add_breadcrumb 'examples', controller: 'examples', action: 'index', only_path: true
+      add_breadcrumb 'example', example_path(123)
       render text: 'test'
     end
   end
@@ -42,6 +43,12 @@ describe ApplicationController do
         should be_success
         assigns(:breadcrumbs)[3][:name].should eq('examples')
         assigns(:breadcrumbs)[3][:url].should eq('/examples')
+      end
+
+      it 'example_path' do
+        should be_success
+        assigns(:breadcrumbs)[4][:name].should eq('example')
+        assigns(:breadcrumbs)[4][:url].should eq('/examples/123')
       end
     end
   end

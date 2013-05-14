@@ -26,12 +26,14 @@ In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb 
       add_breadcrumb -> context { context.title }, -> context { context.sample_path }
       
       def index
-        add_breadcrumb "index", index_url
+        add_breadcrumb "index", controller: 'sample', action: 'index'
+        add_breadcrumb "show", show_path(123)
       end
     
     end
 
 Second arugment passed url_for method for convenient use, except specify nil.
+
 You can use Proc object for arguments, the library calls proc with controller context as argument.
 
 ### View
