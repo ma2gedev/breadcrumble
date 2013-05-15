@@ -12,6 +12,14 @@ module Breadcrumble
           controller.send :add_breadcrumb, name, url
         end
       end
+
+      def add_breadcrumbs *args
+        before_filter do |controller|
+          args.each do |arg|
+            controller.send :add_breadcrumb, arg[0], arg[1]
+          end
+        end
+      end
     end
 
     protected
@@ -28,6 +36,12 @@ module Breadcrumble
               else url ? url_for(url) : nil
               end
       }
+    end
+
+    def add_breadcrumbs *args
+      args.each do |arg|
+        add_breadcrumb arg[0], arg[1]
+      end
     end
 
     def breadcrumbs

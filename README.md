@@ -28,6 +28,7 @@ In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb 
       def index
         add_breadcrumb "index", controller: 'sample', action: 'index'
         add_breadcrumb "show", show_path(123)
+        add_breadcrumbs ["book", "/book"], ["page", "/book/page"]
       end
     
     end
