@@ -21,46 +21,39 @@ describe ApplicationController do
     context '.add_breadcrumbs' do
       it 'having breadcrumbs' do
         should be_success
-        assigns(:breadcrumbs)[0][:name].should eq('root')
-        assigns(:breadcrumbs)[0][:url].should eq('/')
+        assigns(:breadcrumbs)[0].should eq({name: 'root', url: '/'})
       end
 
       it 'url has nil value' do
         should be_success
-        assigns(:breadcrumbs)[1][:name].should eq('nil')
-        assigns(:breadcrumbs)[1][:url].should be_nil
+        assigns(:breadcrumbs)[1].should eq({name: 'nil', url: nil})
       end
     end
 
     context '.add_breadcrumb' do
       it 'execute lambda in controller instance context' do
         should be_success
-        assigns(:breadcrumbs)[2][:name].should eq('http://test.host/examples')
-        assigns(:breadcrumbs)[2][:url].should eq('/examples')
+        assigns(:breadcrumbs)[2].should eq({name: 'http://test.host/examples', url: '/examples'})
       end
     end
 
     context '#add_breadcrumb' do
       it 'url options' do
         should be_success
-        assigns(:breadcrumbs)[3][:name].should eq('examples')
-        assigns(:breadcrumbs)[3][:url].should eq('/examples')
+        assigns(:breadcrumbs)[3].should eq({name: 'examples', url: '/examples'})
       end
 
       it 'example_path' do
         should be_success
-        assigns(:breadcrumbs)[4][:name].should eq('example')
-        assigns(:breadcrumbs)[4][:url].should eq('/examples/123')
+        assigns(:breadcrumbs)[4].should eq({name: 'example', url: '/examples/123'})
       end
     end
 
     context '#add_breadcrumbs' do
       it 'sequence is starting from first argument' do
         should be_success
-        assigns(:breadcrumbs)[5][:name].should eq('crumb1')
-        assigns(:breadcrumbs)[5][:url].should be_nil
-        assigns(:breadcrumbs)[6][:name].should eq('crumb2')
-        assigns(:breadcrumbs)[6][:url].should eq('/examples/1234')
+        assigns(:breadcrumbs)[5].should eq({name: 'crumb1', url: nil})
+        assigns(:breadcrumbs)[6].should eq({name: 'crumb2', url: '/examples/1234'})
       end
     end
   end
