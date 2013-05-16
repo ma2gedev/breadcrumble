@@ -3,13 +3,19 @@ module Breadcrumble
     extend ActiveSupport::Concern
 
     included do
-      helper_method :add_breadcrumb, :breadcrumbs
+      helper_method :add_breadcrumb, :breadcrumbs, :breadcrumb_trails
     end
 
     module ClassMethods
       def add_breadcrumb name, url = nil
         before_filter do |controller|
           controller.send :add_breadcrumb, name, url
+        end
+      end
+
+      def add_breadcrumb_to name, url, trail_index
+        before_filter do |controller|
+          controller.send :add_breadcrumb_to, name, url, trail_index
         end
       end
 
@@ -25,8 +31,13 @@ module Breadcrumble
     protected
 
     def add_breadcrumb name, url = nil
-      @breadcrumbs ||= []
-      @breadcrumbs << {
+      add_breadcrumb_to name, url, 0
+    end
+
+    def add_breadcrumb_to name, url, trail_index
+      @breadcrumb_trails ||= [[]]
+      @breadcrumb_trails[trail_index] ||= []
+      @breadcrumb_trails[trail_index] << {
         name: case name
               when Proc then name.call(self)
               else name
@@ -44,8 +55,12 @@ module Breadcrumble
       end
     end
 
+    def breadcrumb_trails
+      @breadcrumb_trails
+    end
+
     def breadcrumbs
-      @breadcrumbs
+      @breadcrumb_trails.first
     end
   end
 end
