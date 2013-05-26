@@ -71,6 +71,9 @@ Generate template. Run the follwoing.
 
 then edit the partials in your app's `app/views/breadcrumble/` directory.
 
+## Live Demo
+<http://breadcrumble.herokuapp.com/>
+
 ## Contributing
 
 1. Fork it
