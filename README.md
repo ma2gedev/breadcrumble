@@ -37,11 +37,29 @@ Second arugment passed url_for method for convenient use, except specify nil.
 
 You can use Proc object for arguments, the library calls proc with controller context as argument.
 
+If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method with breadcrumb trail index.
+
+    class SampleController
+    
+      add_breadcrumb_to "level 1", "level 1 url", 0 # same as -> add_breadcrumb "level 1", "level 1 url"
+      add_breadcrumb_to "level 2", "level 2 url", 1
+    
+      def index
+        add_breadcrumb "level 1 second item", "level 1 second url", 0
+        add_breadcrumb "level 2 second item", "level 2 second url", 1
+    end
+
 ### View
 In your view, you can render the breadcrumb navigation with the `render_breadcrumbs` helper.
 
     <body>
       <%= render_breadcrumbs %>
+    </body>
+
+You can render multiple breadcrumb by `render_breadcrumb_trails` helper.
+
+    <body>
+      <%= render_breadcrumb_trails %>
     </body>
 
 ### Customizing layout
