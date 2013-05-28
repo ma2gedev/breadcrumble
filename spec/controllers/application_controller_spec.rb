@@ -4,8 +4,8 @@ describe ApplicationController do
   controller do
     add_breadcrumbs ['root', '/'], ['nil', nil]
     add_breadcrumb -> c { c.examples_url }, -> c { c.examples_path }
-    add_breadcrumb_to -> c { c.examples_url }, -> c { c.examples_path }, 1
-    add_breadcrumb_to 'multi third 1', 'multi third url 1', 2
+    add_breadcrumb_to -> c { c.examples_url }, -> c { c.examples_path }, 1, only: :show 
+    add_breadcrumb_to 'multi third 1', 'multi third url 1', 2, only: :show
 
     def index
       add_breadcrumb 'examples', controller: 'examples', action: 'index', only_path: true

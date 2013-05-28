@@ -7,14 +7,14 @@ module Breadcrumble
     end
 
     module ClassMethods
-      def add_breadcrumb name, url = nil
+      def add_breadcrumb name, url = nil, filter_options = {}
         before_filter do |controller|
           controller.send :add_breadcrumb, name, url
         end
       end
 
-      def add_breadcrumb_to name, url, trail_index
-        before_filter do |controller|
+      def add_breadcrumb_to name, url, trail_index, filter_options = {}
+        before_filter(filter_options) do |controller|
           controller.send :add_breadcrumb_to, name, url, trail_index
         end
       end
