@@ -45,8 +45,8 @@ If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method wi
       add_breadcrumb_to "level 2", "level 2 url", 1
     
       def index
-        add_breadcrumb "level 1 second item", "level 1 second url", 0
-        add_breadcrumb "level 2 second item", "level 2 second url", 1
+        add_breadcrumb_to "level 1 second item", "level 1 second url", 0
+        add_breadcrumb_to "level 2 second item", "level 2 second url", 1
     end
 
 ### View
