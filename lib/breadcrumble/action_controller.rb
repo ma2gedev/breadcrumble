@@ -8,7 +8,7 @@ module Breadcrumble
 
     module ClassMethods
       def add_breadcrumb name, url = nil, filter_options = {}
-        before_filter do |controller|
+        before_filter(filter_options) do |controller|
           controller.send :add_breadcrumb, name, url
         end
       end
