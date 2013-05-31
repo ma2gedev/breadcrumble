@@ -2,6 +2,12 @@
 
 Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 3 and Rails 4.0.
 
+Support rich snippets mark up using microdata format as default.
+
+And also support multiple breadcrumb trails.
+
+See also about rich snippets -> <http://support.google.com/webmasters/bin/answer.py?hl=en&answer=185417>
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -75,6 +81,11 @@ then edit the partials in your app's `app/views/breadcrumble/` directory.
 <http://breadcrumble.herokuapp.com/>
 
 ## Contributing
+
+### Easy way
+It's easy to contribute. You only push the star button!
+
+### The other way
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
