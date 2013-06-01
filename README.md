@@ -1,5 +1,7 @@
 # Breadcrumble [![Build Status](https://secure.travis-ci.org/ma2gedev/breadcrumble.png?branch=master)](http://travis-ci.org/ma2gedev/breadcrumble)
 
+![Breadcrumble Logo](http://ma2gedev.github.io/breadcrumble/images/logo_s.png)
+
 Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 3 and Rails 4.0.
 
 Support rich snippets mark up using microdata format as default.
