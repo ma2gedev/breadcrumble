@@ -35,7 +35,7 @@ module Breadcrumble
     end
 
     def add_breadcrumb_to name, url, trail_index
-      @breadcrumb_trails ||= [[]]
+      self.breadcrumb_trails
       @breadcrumb_trails[trail_index] ||= []
       @breadcrumb_trails[trail_index] << {
         name: case name
@@ -56,11 +56,11 @@ module Breadcrumble
     end
 
     def breadcrumb_trails
-      @breadcrumb_trails
+      @breadcrumb_trails ||= []
     end
 
     def breadcrumbs
-      @breadcrumb_trails.first
+      self.breadcrumb_trails.first || []
     end
   end
 end
