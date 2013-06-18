@@ -1,4 +1,4 @@
-# Breadcrumble [![Build Status](https://secure.travis-ci.org/ma2gedev/breadcrumble.png?branch=master)](http://travis-ci.org/ma2gedev/breadcrumble)
+# Breadcrumble [![Build Status](https://secure.travis-ci.org/ma2gedev/breadcrumble.png?branch=master)](http://travis-ci.org/ma2gedev/breadcrumble) [![Dependency Status](https://gemnasium.com/ma2gedev/breadcrumble.png)](https://gemnasium.com/ma2gedev/breadcrumble) 
 
 ![Breadcrumble Logo](http://ma2gedev.github.io/breadcrumble/images/logo_s.png)
 created by [@524shoutz_nika](https://twitter.com/524shoutz_nika)
