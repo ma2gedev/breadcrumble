@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Breadcrumble::VERSION
 
-  gem.add_dependency "rails", ['>= 4.0.0.rc1']
+  gem.add_dependency "rails", ['>= 4.0.0.rc2']
   gem.add_development_dependency "sqlite3"
   gem.add_development_dependency "rspec-rails"
   gem.add_development_dependency "coveralls"
