@@ -7,6 +7,10 @@ module Breadcrumble
     end
 
     module ClassMethods
+      # Add a breadcrumb
+      # @example
+      #   add_breadcrumb "home", home_url
+      #   add_breadcrumb -> context { context.title }, -> context { context.sample_path }
       def add_breadcrumb name, url = nil, filter_options = {}
         before_filter(filter_options) do |controller|
           controller.send :add_breadcrumb, name, url
@@ -30,6 +34,10 @@ module Breadcrumble
 
     protected
 
+    # Add a breadcrumb
+    # @example
+    #   add_breadcrumb "index", controller: 'sample', action: 'index'
+    #   add_breadcrumb "show", show_path(123)
     def add_breadcrumb name, url = nil
       add_breadcrumb_to name, url, 0
     end
