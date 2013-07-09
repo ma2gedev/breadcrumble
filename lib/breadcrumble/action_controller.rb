@@ -7,7 +7,7 @@ module Breadcrumble
     end
 
     module ClassMethods
-      # Add a breadcrumb
+      # Add a breadcrumb.
       # @example
       #   add_breadcrumb "home", home_url
       #   add_breadcrumb -> context { context.title }, -> context { context.sample_path }
@@ -34,7 +34,7 @@ module Breadcrumble
 
     protected
 
-    # Add a breadcrumb
+    # Add a breadcrumb.
     # @example
     #   add_breadcrumb "index", controller: 'sample', action: 'index'
     #   add_breadcrumb "show", show_path(123)
@@ -67,6 +67,7 @@ module Breadcrumble
       @breadcrumb_trails ||= []
     end
 
+    # Array of the breadcrumbs.
     def breadcrumbs
       self.breadcrumb_trails.first || []
     end

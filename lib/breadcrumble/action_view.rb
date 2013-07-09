@@ -1,5 +1,6 @@
 module Breadcrumble
   module ActionView
+    # Render breadcrumbs.
     def render_breadcrumbs options=nil
       render partial: 'breadcrumble/breadcrumb', locals: options
     end
