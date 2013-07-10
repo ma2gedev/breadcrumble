@@ -2,23 +2,23 @@ require "spec_helper"
 
 describe ApplicationController do
   controller do
-    add_breadcrumbs ['root', '/'], ['nil', nil]
-    add_breadcrumb -> c { c.examples_url }, -> c { c.examples_path }
-    add_breadcrumb_to -> c { c.examples_url }, -> c { c.examples_path }, 1, only: :show 
-    add_breadcrumb_to 'multi third 1', 'multi third url 1', 2, only: :show
+    add_breadcrumbs(['root', '/'], ['nil', nil])
+    add_breadcrumb(-> c { c.examples_url }, -> c { c.examples_path })
+    add_breadcrumb_to(-> c { c.examples_url }, -> c { c.examples_path }, 1, only: :show)
+    add_breadcrumb_to('multi third 1', 'multi third url 1', 2, only: :show)
 
     def index
-      add_breadcrumb 'examples', controller: 'examples', action: 'index', only_path: true
-      add_breadcrumb 'example', example_path(123)
-      add_breadcrumbs ['crumb1'], ['crumb2', -> c { example_path(1234) }]
+      add_breadcrumb('examples', controller: 'examples', action: 'index', only_path: true)
+      add_breadcrumb('example', example_path(123))
+      add_breadcrumbs(['crumb1'], ['crumb2', -> c { example_path(1234) }])
       render text: 'test'
     end
 
     def show
-      add_breadcrumb_to 'examples', {controller: 'examples', action: 'index', only_path: true}, 1
-      add_breadcrumb_to 'example', example_path(123), 1
-      add_breadcrumb_to 'multi third 2', 'multi third url 2', 2
-      add_breadcrumb_to 'multi third 3', 'multi third url 3', 2
+      add_breadcrumb_to('examples', {controller: 'examples', action: 'index', only_path: true}, 1)
+      add_breadcrumb_to('example', example_path(123), 1)
+      add_breadcrumb_to('multi third 2', 'multi third url 2', 2)
+      add_breadcrumb_to('multi third 3', 'multi third url 3', 2)
       render text: 'test'
     end
   end
