@@ -37,13 +37,13 @@ In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb 
 
     class SampleController
     
-      add_breadcrumb "home", home_url
-      add_breadcrumb -> context { context.title }, -> context { context.sample_path }
+      add_breadcrumb("home", home_url)
+      add_breadcrumb(-> context { context.title }, -> context { context.sample_path })
       
       def index
-        add_breadcrumb "index", controller: 'sample', action: 'index'
-        add_breadcrumb "show", show_path(123)
-        add_breadcrumbs ["book", "/book"], ["page", "/book/page"]
+        add_breadcrumb("index", controller: 'sample', action: 'index')
+        add_breadcrumb("show", show_path(123))
+        add_breadcrumbs(["book", "/book"], ["page", "/book/page"])
       end
     
     end
@@ -56,12 +56,12 @@ If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method wi
 
     class SampleController
     
-      add_breadcrumb_to "level 1", "level 1 url", 0 # same as -> add_breadcrumb "level 1", "level 1 url"
-      add_breadcrumb_to "level 2", "level 2 url", 1
+      add_breadcrumb_to("level 1", "level 1 url", 0) # same as -> add_breadcrumb("level 1", "level 1 url")
+      add_breadcrumb_to("level 2", "level 2 url", )
     
       def index
-        add_breadcrumb_to "level 1 second item", "level 1 second url", 0
-        add_breadcrumb_to "level 2 second item", "level 2 second url", 1
+        add_breadcrumb_to("level 1 second item", "level 1 second url", 0)
+        add_breadcrumb_to("level 2 second item", "level 2 second url", 1)
     end
 
 ### View
