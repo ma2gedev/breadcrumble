@@ -5,6 +5,7 @@ module Breadcrumble
       render partial: 'breadcrumble/breadcrumb', locals: options
     end
 
+    # Render breadcrumb trails.
     def render_breadcrumb_trails(options = nil)
       render partial: 'breadcrumble/breadcrumb_trails', locals: options
     end

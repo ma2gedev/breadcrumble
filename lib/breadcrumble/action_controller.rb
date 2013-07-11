@@ -8,6 +8,7 @@ module Breadcrumble
 
     module ClassMethods
       # Add a breadcrumb.
+      # @param filter_options filter_options passed before_filter method
       # @example
       #   add_breadcrumb("home", home_url)
       #   add_breadcrumb(-> context { context.title }, -> context { context.sample_path })
@@ -17,6 +18,11 @@ module Breadcrumble
         end
       end
 
+      # Add a breadcrumb to breadcrumb trail.
+      # @param trail_index index of breadcrumb trail
+      # @param filter_options filter_options passed before_filter method
+      # @example
+      #   add_breadcrumb_to("level 1", "level 1 url", 0, only: :show)
       def add_breadcrumb_to(name, url, trail_index, filter_options = {})
         before_filter(filter_options) do |controller|
           controller.send(:add_breadcrumb_to, name, url, trail_index)
@@ -42,6 +48,10 @@ module Breadcrumble
       add_breadcrumb_to(name, url, 0)
     end
 
+    # Add a breadcrumb to breadcrumb trail.
+    # @param trail_index index of breadcrumb trail
+    # @example
+    #   add_breadcrumb_to("level 1", "level 1 url", 0)
     def add_breadcrumb_to(name, url, trail_index)
       self.breadcrumb_trails
       @breadcrumb_trails[trail_index] ||= []
@@ -63,6 +73,7 @@ module Breadcrumble
       end
     end
 
+    # Array of the breadcrumb trails.
     def breadcrumb_trails
       @breadcrumb_trails ||= []
     end
