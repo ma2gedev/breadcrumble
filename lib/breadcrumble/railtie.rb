@@ -1,6 +1,6 @@
 module Breadcrumble
   class Railtie < ::Rails::Railtie
-    initializer "breadcrumble.initialize" do
+    initializer 'breadcrumble.initialize' do
       ActiveSupport.on_load(:action_controller) do
         include Breadcrumble::ActionController
       end

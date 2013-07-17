@@ -5,7 +5,11 @@ module Breadcrumble
       desc 'This generator generates breadcrumbs partial template.'
 
       def generate_views
-        names = ['_breadcrumb.html.erb', '_breadcrumb_trails.html.erb', '_breadcrumb_trail.html.erb']
+        names = [
+          '_breadcrumb.html.erb',
+          '_breadcrumb_trails.html.erb',
+          '_breadcrumb_trail.html.erb'
+        ]
         names.each do |name|
           copy_file "#{name}", "app/views/breadcrumble/#{name}"
         end
