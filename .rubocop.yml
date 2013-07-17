@@ -1,0 +1,14 @@
+AllCops:
+  Includes: []
+  Excludes:
+    - vendor/**
+    - coverage/**
+    - spec/**
+    - tmp/**
+    - pkg/**
+
+LineLength:
+  Max: 100
+
+MethodLength:
+  Max: 15
