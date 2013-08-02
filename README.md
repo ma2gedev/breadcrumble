@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/ma2gedev/breadcrumble/badge.png)](https://coveralls.io/r/ma2gedev/breadcrumble)
 
 ![Breadcrumble Logo](http://ma2gedev.github.io/breadcrumble/images/logo_s.png)
-created by [@524shoutz_nika](https://twitter.com/524shoutz_nika)
+logo designed by [@524shoutz_nika](https://twitter.com/524shoutz_nika)
 
 Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 3 and Rails 4.0.
 
