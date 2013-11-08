@@ -53,7 +53,7 @@ module Breadcrumble
     # @example
     #   add_breadcrumb_to("level 1", "level 1 url", 0)
     def add_breadcrumb_to(name, url, trail_index)
-      self.breadcrumb_trails
+      breadcrumb_trails
       @breadcrumb_trails[trail_index] ||= []
       @breadcrumb_trails[trail_index] << {
         name: case name
@@ -80,7 +80,7 @@ module Breadcrumble
 
     # Array of the breadcrumbs.
     def breadcrumbs
-      self.breadcrumb_trails.first || []
+      breadcrumb_trails.first || []
     end
   end
 end
