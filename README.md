@@ -32,7 +32,9 @@ Or install it yourself as:
     $ gem install breadcrumble
 
 ## Usage
+
 ### Controller
+
 In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb stack.
 
     class SampleController
@@ -65,6 +67,7 @@ If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method wi
     end
 
 ### View
+
 In your view, you can render the breadcrumb navigation with the `render_breadcrumbs` helper.
 
     <body>
@@ -78,6 +81,7 @@ You can render multiple breadcrumb by `render_breadcrumb_trails` helper.
     </body>
 
 ### Customizing layout
+
 Breadcrumble generates default partial template for your app.
 
 Generate template. Run the follwoing.
@@ -105,11 +109,13 @@ And then calling `render_breadcrumbs` or `render_breadcrumb_trails` method with 
 ```
 
 ## Live Demo
+
 <http://breadcrumble.herokuapp.com/>
 
 ## Contributing
 
 ### Easy way
+
 It's easy to contribute. You only push the star button!
 
 ### The other way
