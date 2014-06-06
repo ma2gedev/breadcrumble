@@ -86,6 +86,24 @@ Generate template. Run the follwoing.
 
 then edit the partials in your app's `app/views/breadcrumble/` directory.
 
+### Theme
+
+You can choose template themes in a single application. Create a directory with theme name in your app's `app/views/breadcrumble/` and create custom template files.
+
+```
+$ rails g breadcrumble:views
+$ cd app/views/breadcrumble
+$ mkdir my_custom_theme
+$ cp _*.erb my_custom_theme/
+```
+
+And then calling `render_breadcrumbs` or `render_breadcrumb_trails` method with theme option.
+
+```
+<%= render_breadcrumbs(theme: 'my_custom_theme') %>
+<%= render_breadcrumb_trails(theme: 'my_custom_theme') %>
+```
+
 ## Live Demo
 <http://breadcrumble.herokuapp.com/>
 
