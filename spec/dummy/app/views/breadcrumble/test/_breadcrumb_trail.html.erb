@@ -1,0 +1,11 @@
+<span itemscope="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+  <% span_title = content_tag(:span, trail[0][:name], itemprop: "title") %>
+  <% if trail[0][:url] == nil %>
+    <%= span_title %>
+  <% else %>
+    <%= link_to_unless_current span_title, trail[0][:url], itemprop: "url" %>
+  <% end %>
+  <% if trail.size > 1 %>
+  &gt;<%= render partial: 'breadcrumble/breadcrumb_trail', locals: { trail: trail.drop(1) } %>
+  <% end %>
+</span>
