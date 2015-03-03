@@ -31,6 +31,8 @@ Or install it yourself as:
 
     $ gem install breadcrumble
 
+Specify breadcrumble version 3.0.6 with Rails version 3.2.x.
+
 ## Usage
 
 ### Controller
