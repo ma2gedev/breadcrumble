@@ -9,7 +9,7 @@
 ![Breadcrumble Logo](http://ma2gedev.github.io/breadcrumble/images/logo_s.png)
 logo designed by [@524shoutz_nika](https://twitter.com/524shoutz_nika)
 
-Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 3, 4.0, 4.1 and 4.2.
+Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 4.0, 4.1 and 4.2.
 
 Support rich snippets mark up using microdata format as default.
 

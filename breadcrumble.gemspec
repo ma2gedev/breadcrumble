@@ -4,8 +4,8 @@ require File.expand_path('../lib/breadcrumble/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["ma2ge"]
   gem.email         = ["takayuki.1229@gmail.com"]
-  gem.description   = "A breadcrumbs plugin for Ruby on Rails 3, Rails 4.0, 4.1 and 4.2."
-  gem.summary       = "Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 3, Rails 4.0, 4.1 and 4.2."
+  gem.description   = "A breadcrumbs plugin for Ruby on Rails 4.0, 4.1 and 4.2."
+  gem.summary       = "Breadcrumble is a simple breadcrumb navigation plugin for Ruby on Rails 4.0, 4.1 and 4.2."
   gem.homepage      = "https://github.com/ma2gedev/breadcrumble"
 
   gem.files         = `git ls-files`.split($\)
