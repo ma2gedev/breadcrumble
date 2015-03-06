@@ -36,6 +36,7 @@ describe 'Breadcrumble::ActionView' do
     it { is_expected.to match('trail2_level1_url') }
     it { is_expected.to match('trail2_level2') }
     it { is_expected.to match('trail2_level2_url') }
+    it { is_expected.to match('itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"') }
   end
   context '#render_breadcrumbs with theme' do
     before do
