@@ -5,6 +5,7 @@
 [![Dependency Status](https://gemnasium.com/ma2gedev/breadcrumble.png)](https://gemnasium.com/ma2gedev/breadcrumble)
 [![Code Climate](https://codeclimate.com/github/ma2gedev/breadcrumble.png)](https://codeclimate.com/github/ma2gedev/breadcrumble)
 [![Coverage Status](https://coveralls.io/repos/ma2gedev/breadcrumble/badge.png)](https://coveralls.io/r/ma2gedev/breadcrumble)
+[![Inline docs](http://inch-ci.org/github/ma2gedev/breadcrumble.svg?branch=master)](http://inch-ci.org/github/ma2gedev/breadcrumble)
 
 ![Breadcrumble Logo](http://ma2gedev.github.io/breadcrumble/images/logo_s.png)
 logo designed by [@524shoutz_nika](https://twitter.com/524shoutz_nika)
