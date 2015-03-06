@@ -13,6 +13,7 @@ describe 'Breadcrumble::ActionView' do
     it { is_expected.to match('root_url') }
     it { is_expected.to match('test_name') }
     it { is_expected.to match('test_url') }
+    it { is_expected.to match(' itemscope ') }
   end
   context '#render_breadcrumb_trails' do
     before do
@@ -47,6 +48,7 @@ describe 'Breadcrumble::ActionView' do
     end
     subject { helper.render_breadcrumbs(theme: 'test') }
     it { is_expected.to match('test breadcrumb theme') }
+    it { is_expected.to match(' itemscope ') }
   end
   context '#render_breadcrumb_trails with theme' do
     before do

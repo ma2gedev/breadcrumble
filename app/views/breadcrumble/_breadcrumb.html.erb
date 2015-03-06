@@ -1,7 +1,7 @@
 <div>
   <% breadcrumbs.each_with_index do |crumb, i| %>
     <%= '>' unless i == 0 %>
-    <span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
       <% span_title = content_tag(:span, crumb[:name], itemprop: "title") %>
       <% if crumb[:url] == nil %>
         <%= span_title %>
