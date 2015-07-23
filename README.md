@@ -16,7 +16,7 @@ Support rich snippets mark up using microdata format as default.
 
 And also support multiple breadcrumb trails.
 
-See also about rich snippets -> <http://support.google.com/webmasters/bin/answer.py?hl=en&answer=185417>
+See also about rich snippets -> <https://developers.google.com/structured-data/breadcrumbs>
 
 ## Installation
 
