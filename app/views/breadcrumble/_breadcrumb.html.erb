@@ -1,0 +1,14 @@
+<div itemscope itemtype="http://schema.org/BreadcrumbList">
+  <% breadcrumbs.each_with_index do |crumb, i| %>
+    <%= '>' unless i == 0 %>
+    <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <% span_title = content_tag(:span, crumb[:name], itemprop: "name") %>
+      <% if crumb[:url] == nil %>
+        <%= span_title %>
+      <% else %>
+        <%= link_to_unless_current span_title, crumb[:url], itemprop: "item" %>
+      <% end %>
+      <meta itemprop="position" content="<%= i + 1 %>" />
+    </span>
+  <% end %>
+</div>
