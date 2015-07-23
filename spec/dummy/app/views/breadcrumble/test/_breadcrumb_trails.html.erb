@@ -9,7 +9,7 @@ test breadcrumb_trails theme
         <%= link_to_unless_current span_title, trail[0][:url], itemprop: "url" %>
       <% end %>
       <% if trail.size > 1 %>
-        &gt;<%= render partial: 'breadcrumble/breadcrumb_trail', locals: { trail: trail.drop(1) } %>
+        &gt;<%= render partial: 'breadcrumble/test/breadcrumb_trail', locals: { trail: trail.drop(1) } %>
       <% end %>
     </div>
   <% end %>
