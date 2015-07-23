@@ -8,7 +8,7 @@ describe 'Breadcrumble::ActionView' do
         { name: 'test_name', url: '/test_url' }
       ]}
     end
-    subject { helper.render_breadcrumbs }
+    subject { helper.render_breadcrumbs(theme: 'data_vocabulary') }
     it { is_expected.to match('root_name') }
     it { is_expected.to match('root_url') }
     it { is_expected.to match('test_name') }
@@ -28,7 +28,7 @@ describe 'Breadcrumble::ActionView' do
         ]
       ]}
     end
-    subject { helper.render_breadcrumb_trails }
+    subject { helper.render_breadcrumb_trails(theme: 'data_vocabulary') }
     it { is_expected.to match('trail1_level1') }
     it { is_expected.to match('trail1_level1_url') }
     it { is_expected.to match('trail1_level2') }
