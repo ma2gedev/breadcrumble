@@ -7,8 +7,7 @@ module Breadcrumble
       def generate_views
         names = [
           '_breadcrumb.html.erb',
-          '_breadcrumb_trails.html.erb',
-          '_breadcrumb_trail.html.erb'
+          '_breadcrumb_trails.html.erb'
         ]
         names.each do |name|
           copy_file "#{name}", "app/views/breadcrumble/#{name}"
