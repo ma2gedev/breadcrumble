@@ -4,8 +4,15 @@ cache: bundler
 rvm:
   - 2.0.0
   - 2.1.0
-  - 2.2.0
+  - 2.2.3
 gemfile:
   - gemfiles/4.0.gemfile
   - gemfiles/4.1.gemfile
   - gemfiles/4.2.gemfile
+  - gemfiles/edge.gemfile
+matrix:
+  exclude:
+    - rvm: 2.0.0
+      gemfile: gemfiles/edge.gemfile
+    - rvm: 2.1.0
+      gemfile: gemfiles/edge.gemfile

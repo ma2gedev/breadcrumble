@@ -2,5 +2,10 @@ source "https://rubygems.org"
 
 gem 'rails', github: 'rails/rails'
 gem 'arel', github: 'rails/arel'
+gem 'rack', github: 'rack/rack'
+gem 'sprockets-rails', github: 'rails/sprockets-rails'
+gem 'sprockets', github: 'rails/sprockets'
+
+gem 'rails-controller-testing', group: :test # for `assigns` was removed
 
 gemspec path: '../'
