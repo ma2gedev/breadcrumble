@@ -3,7 +3,9 @@ module Breadcrumble
     extend ActiveSupport::Concern
 
     included do
-      helper_method :add_breadcrumb, :breadcrumbs, :breadcrumb_trails
+      if respond_to?(:helper_method)
+        helper_method :add_breadcrumb, :breadcrumbs, :breadcrumb_trails
+      end
     end
 
     module ClassMethods
