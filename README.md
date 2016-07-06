@@ -115,6 +115,17 @@ And then calling `render_breadcrumbs` or `render_breadcrumb_trails` method with 
 
 <http://breadcrumble.herokuapp.com/>
 
+## Development
+
+### test with specified Rails version
+
+like the following:
+
+```bash
+$ bundle install --gemfile=gemfiles/4.1.gemfile --path vendor/bundle
+$ BUNDLE_GEMFILE=gemfiles/4.1.gemfile bundle exec rake
+```
+
 ## Contributing
 
 ### Easy way
