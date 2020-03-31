@@ -2,10 +2,10 @@ class ExamplesController < ApplicationController
   protect_from_forgery
 
   def index
-    render text: 'test'
+    render plain: 'test'
   end
 
   def show
-    render text: 'test'
+    render plain: 'test'
   end
 end
