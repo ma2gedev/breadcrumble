@@ -11,7 +11,7 @@ describe ApplicationController do
       add_breadcrumb('examples', controller: 'examples', action: 'index', only_path: true)
       add_breadcrumb('example', example_path(123))
       add_breadcrumbs(['crumb1'], ['crumb2', -> c { example_path(1234) }])
-      render text: 'test'
+      render plain: 'test'
     end
 
     def show
@@ -19,7 +19,7 @@ describe ApplicationController do
       add_breadcrumb_to('example', example_path(123), 1)
       add_breadcrumb_to('multi third 2', 'multi third url 2', 2)
       add_breadcrumb_to('multi third 3', 'multi third url 3', 2)
-      render text: 'test'
+      render plain: 'test'
     end
   end
 
