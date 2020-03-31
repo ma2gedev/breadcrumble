@@ -70,7 +70,7 @@ describe ApplicationController do
 
   describe '#show' do
     subject do
-      get :show, id: 1
+      get :show, params: { id: 1 }
     end
 
     context 'multiple breadcrumbs' do
