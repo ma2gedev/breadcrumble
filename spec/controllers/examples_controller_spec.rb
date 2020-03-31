@@ -7,12 +7,12 @@ describe ExamplesController do
     end
 
     it 'breadcrumbs' do
-      is_expected.to be_success
+      is_expected.to be_successful
       expect(controller.send(:breadcrumbs)).to eq([])
     end
 
     it 'breadcrumb_trails' do
-      is_expected.to be_success
+      is_expected.to be_successful
       expect(controller.send(:breadcrumb_trails)).to eq([])
     end
   end
