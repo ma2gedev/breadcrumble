@@ -2,17 +2,9 @@ language: ruby
 sudo: false
 cache: bundler
 rvm:
-  - 2.0.0
-  - 2.1.10
-  - 2.2.5
+  - 2.5.7
+  - 2.6.5
+  - 2.7.0
 gemfile:
-  - gemfiles/4.0.gemfile
-  - gemfiles/4.1.gemfile
-  - gemfiles/4.2.gemfile
-  - gemfiles/5.0.gemfile
-matrix:
-  exclude:
-    - rvm: 2.0.0
-      gemfile: gemfiles/5.0.gemfile
-    - rvm: 2.1.10
-      gemfile: gemfiles/5.0.gemfile
+  - gemfiles/5.2.gemfile
+  - gemfiles/6.0.gemfile
