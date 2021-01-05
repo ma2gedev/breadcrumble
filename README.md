@@ -1,7 +1,7 @@
 # Breadcrumble
 
 [![Gem Version](https://badge.fury.io/rb/breadcrumble.png)](http://badge.fury.io/rb/breadcrumble)
-[![Build Status](https://secure.travis-ci.org/ma2gedev/breadcrumble.png?branch=master)](http://travis-ci.org/ma2gedev/breadcrumble)
+[![Build Status](https://github.com/ma2gedev/breadcrumble/workflows/Ruby/badge.svg?branch=master)](https://github.com/ma2gedev/breadcrumble/actions?query=workflow%3ARuby)
 [![Dependency Status](https://gemnasium.com/ma2gedev/breadcrumble.png)](https://gemnasium.com/ma2gedev/breadcrumble)
 [![Code Climate](https://codeclimate.com/github/ma2gedev/breadcrumble.png)](https://codeclimate.com/github/ma2gedev/breadcrumble)
 [![Coverage Status](https://coveralls.io/repos/ma2gedev/breadcrumble/badge.png)](https://coveralls.io/r/ma2gedev/breadcrumble)
