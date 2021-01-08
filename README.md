@@ -123,8 +123,8 @@ And then calling `render_breadcrumbs` or `render_breadcrumb_trails` method with 
 like the following:
 
 ```bash
-$ bundle install --gemfile=gemfiles/4.1.gemfile --path vendor/bundle
-$ BUNDLE_GEMFILE=gemfiles/4.1.gemfile bundle exec rake
+$ bundle install --gemfile=gemfiles/6.1.gemfile
+$ BUNDLE_GEMFILE=gemfiles/6.1.gemfile bundle exec rake
 ```
 
 ## Contributing
