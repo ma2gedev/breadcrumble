@@ -16,7 +16,7 @@ Support rich snippets mark up using microdata format as default.
 
 And also support multiple breadcrumb trails.
 
-See also about rich snippets -> <https://developers.google.com/structured-data/breadcrumbs>
+See also about rich snippets -> <https://developers.google.com/search/docs/data-types/breadcrumb>
 
 ## Installation
 
