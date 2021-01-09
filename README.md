@@ -51,9 +51,9 @@ In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb 
     
     end
 
-Second arugment passed url_for method for convenient use, except specify nil.
+Second arugment passed `url_for` method for convenient use, except specify `nil`.
 
-You can use Proc object for arguments, the library calls proc with controller context as argument.
+You can use `Proc` object for arguments, the library calls proc with controller context as argument.
 
 If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method with breadcrumb trail index.
 
