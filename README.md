@@ -32,9 +32,6 @@ Or install it yourself as:
 
     $ gem install breadcrumble
 
-Specify breadcrumble version 3.0.6 with Rails version 3.2.x.
-Specify breadcrumble version 5.0.0 with under Rails version 5.0.x.
-
 ## Usage
 
 ### Controller
