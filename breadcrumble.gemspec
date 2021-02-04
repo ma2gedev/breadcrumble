@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/breadcrumble/version', __FILE__)
+require_relative 'lib/breadcrumble/version'
 
 Gem::Specification.new do |gem|
   gem.authors       = ["ma2ge"]
@@ -9,10 +9,9 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/ma2gedev/breadcrumble"
 
   gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.executables   = gem.files.grep(%r{^exe/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "breadcrumble"
-  gem.require_paths = ["lib"]
   gem.version       = Breadcrumble::VERSION
 
   gem.add_dependency "rails", ['>= 5.2.0']

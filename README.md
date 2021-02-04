@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/breadcrumble.png)](http://badge.fury.io/rb/breadcrumble)
 [![Build Status](https://github.com/ma2gedev/breadcrumble/workflows/Ruby/badge.svg?branch=master)](https://github.com/ma2gedev/breadcrumble/actions?query=workflow%3ARuby)
-[![Dependency Status](https://gemnasium.com/ma2gedev/breadcrumble.png)](https://gemnasium.com/ma2gedev/breadcrumble)
 [![Code Climate](https://codeclimate.com/github/ma2gedev/breadcrumble.png)](https://codeclimate.com/github/ma2gedev/breadcrumble)
 [![Coverage Status](https://coveralls.io/repos/ma2gedev/breadcrumble/badge.png)](https://coveralls.io/r/ma2gedev/breadcrumble)
 [![Inline docs](http://inch-ci.org/github/ma2gedev/breadcrumble.svg?branch=master)](http://inch-ci.org/github/ma2gedev/breadcrumble)
@@ -39,16 +38,16 @@ Or install it yourself as:
 In your controller, call `add_breadcrumb` to push a new crumb on the breadcrumb stack.
 
     class SampleController
-    
+
       add_breadcrumb("home", home_url)
       add_breadcrumb(-> context { context.title }, -> context { context.sample_path })
-      
+
       def index
         add_breadcrumb("index", controller: 'sample', action: 'index')
         add_breadcrumb("show", show_path(123))
         add_breadcrumbs(["book", "/book"], ["page", "/book/page"])
       end
-    
+
     end
 
 Second arugment passed `url_for` method for convenient use, except specify `nil`.
@@ -58,10 +57,10 @@ You can use `Proc` object for arguments, the library calls proc with controller 
 If you would like to use multiple breadcrumb, call `add_breadcrumb_to` method with breadcrumb trail index.
 
     class SampleController
-    
+
       add_breadcrumb_to("level 1", "level 1 url", 0) # same as -> add_breadcrumb("level 1", "level 1 url")
       add_breadcrumb_to("level 2", "level 2 url", 1)
-    
+
       def index
         add_breadcrumb_to("level 1 second item", "level 1 second url", 0)
         add_breadcrumb_to("level 2 second item", "level 2 second url", 1)
