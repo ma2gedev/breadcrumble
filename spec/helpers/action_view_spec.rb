@@ -16,14 +16,6 @@ describe 'Breadcrumble::ActionView' do
       it { is_expected.to match('test_url') }
       it { is_expected.to match(' itemscope ') }
     end
-    context 'data-vocabulary.org' do
-      subject { helper.render_breadcrumbs(theme: 'data_vocabulary') }
-      it { is_expected.to match('root_name') }
-      it { is_expected.to match('root_url') }
-      it { is_expected.to match('test_name') }
-      it { is_expected.to match('test_url') }
-      it { is_expected.to match(' itemscope ') }
-    end
   end
   context '#render_breadcrumb_trails' do
     before do
@@ -50,18 +42,6 @@ describe 'Breadcrumble::ActionView' do
       it { is_expected.to match('trail2_level2_url') }
       it { is_expected.to match('itemscope itemtype="http://schema.org/BreadcrumbList"') }
       it { is_expected.to match('itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"') }
-    end
-    context 'data-vocabulary.org' do
-      subject { helper.render_breadcrumb_trails(theme: 'data_vocabulary') }
-      it { is_expected.to match('trail1_level1') }
-      it { is_expected.to match('trail1_level1_url') }
-      it { is_expected.to match('trail1_level2') }
-      it { is_expected.to match('trail1_level2_url') }
-      it { is_expected.to match('trail2_level1') }
-      it { is_expected.to match('trail2_level1_url') }
-      it { is_expected.to match('trail2_level2') }
-      it { is_expected.to match('trail2_level2_url') }
-      it { is_expected.to match('itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"') }
     end
   end
   context '#render_breadcrumbs with theme' do
