@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = "A breadcrumbs plugin for latest Ruby on Rails."
   gem.summary       = "Breadcrumble is a simple breadcrumb navigation plugin for latest Ruby on Rails."
   gem.homepage      = "https://github.com/ma2gedev/breadcrumble"
+  gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^exe/}).map{ |f| File.basename(f) }
