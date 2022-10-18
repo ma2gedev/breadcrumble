@@ -108,10 +108,6 @@ And then calling `render_breadcrumbs` or `render_breadcrumb_trails` method with 
 <%= render_breadcrumb_trails(theme: 'my_custom_theme') %>
 ```
 
-## Live Demo
-
-<http://breadcrumble.herokuapp.com/>
-
 ## Development
 
 ### test with specified Rails version
